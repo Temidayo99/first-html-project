@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset = "utf-8">
+<title>CV</title>
+<style>
+#name {
+	//color : rgb(43,164,243);
+	color: black;
+	}
+	
+#line {
+	background-color: rgb(43,164,243);
+	height: 2px;
+	}
+
+.title {
+	color: rgb(87,181,246);
+	}
+
+ul {
+	display: inline-block;
+}
+
+.date {
+	color: gray;
+}
+
+img {
+	padding: 0 15px; 
+	float: left;
+	margin-top: 1px;
+	height: 126px;
+}
+
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  border-color: rgb(43,164,243);
+  background-color: rgb(207,211,204);
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  font-weight: bold;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  margin-left: .5em;
+}
+
+form > center {
+	color: rgb(43,164,243);
+}
+
+body {
+	background-color: gray;
+}
+
+</style>
+</head>
+
+<body>
+<img src = "https://res.cloudinary.com/temidayomary/image/upload/v1567524090/Temmy1_hi2q3v.jpg" alt="Cloudinary" width = "190px" height = "170px">
+
+<center id="name">
+<p><h2>TEMIDAYO OYELAMI</h2></p>
+</center>
+<center id="address">
+<p>Eyenkole Area,<br>Ejigbo, Osun State, Nigeria<br>+2348103483661<br>oyelamitemidayo99@gmail.com</p>
+</center>
+<hr id="line">
+<br>
+
+<div class="title">
+<p ><h3><u>PROFESSIONAL SUMMARY</u></h3></p>
+</div>
+<p>Enthusiastic, highly-motivated student seeking for an internship position that will allow me to explore career options in the Information Technology sector.</p>
+<br>
+
+<div class="title">
+<p><h3><u>SKILLS</u></h3></p>
+</div>
+
+		<ul>
+			<li>Computer Proficient</li>
+			<li>Effective time management</li>
+			<li>Positive learning environment</li>
+			<li>Completing projects on deadline</li>
+			<li>Identifying problems</li>
+		</ul>
+				<ul>
+					<li>JavaScript</li>
+					<li>HTML</li>
+					<li>Web development</li>
+					<li>Python</li>
+					<li>CSS</li>
+				</ul>
+<br>
+
+<div class="title">
+<p><h3><u>EXPERIENCE</u></h3></p>
+</div>
+
+<div class="date">
+<p><i><u>MAY 2018 - SEPTEMBER 2018</u></i></p>
+</div>
+
+<strong>Lautech Data Science, Ogbomoso, Oyo State</strong><i> - Learner</i><br>
+	<ul>
+		<li>Attended an Artificial Intelligence class for sixteen(16) saturdays.</li>
+		<li>Introduced to Python.</li>
+		<li>Worked on some projects on Artificial Intelligence to detect objects.</li>
+	</ul>
+
+<div class="date">
+<p><i><u>MAY 2019 - PRESENT</u></i></p>
+</div>
+
+<strong>Google Africa Certification Scholarship By Andela</strong><i> - Learner</i><br>
+<ul>
+<li>Currently undergoing training in the mobile web track.</li>
+</ul>
+
+<div class="title">
+<p><h3><u>EDUCATION</u></h3></p>
+</div>
+
+<div class="date">
+<p><i><u>FEBRUARY 2015 - 2020(EXPECTED)</u></i></p>
+</div>
+<p><strong>Ladoke Akintola University of Technology, Ogbomoso</strong></p>
+<p>B.Tech<strong> :</strong> Computer Science and Engineering</p>
+Member of Lautech Data Science
+<br>
+
+<div class="title">
+<h3><u>HOBBIES</u></h3></p></div>
+	<li>Researching</li>
+	<li>Surfing the net</li>
+
+<br/>
+
+<footer>
+<form action="thankyou.html" method="post">
+<center><strong>Leave A Message!</strong></center>
+<br/>
+	<div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" minlength="4" required>
+  </div>
+  
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_mail" required>
+  </div>
+  
+  <div>
+	<label for="title">Title/Subject:</label>
+	<input type="text" id="title" name="user_title" required>
+  </div>
+  
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message" cols="30" rows="10" minlength="20" required></textarea>
+  </div>
+  
+  <div class="button">
+  <button type="submit">Send your message</button>
+</div>
+</form>
+</footer>
+
+
+<script>
+var form  = document.getElementsByTagName('form')[0];
+var email = document.getElementById('mail');
+var error = document.querySelector('.error');
+
+email.addEventListener("input", function (event) {
+  if (email.validity.valid) {
+    error.innerHTML = ""; // Reset the content of the message
+    error.className = "error"; // Reset the visual state of the message
+  }
+}, false);
+form.addEventListener("submit", function (event) {
+  if (!email.validity.valid) {
+    error.innerHTML = "Please input a valid email!";
+    error.className = "error active";
+    event.preventDefault();
+  }
+}, false);
+</script>
+
+</body>
+</html>
